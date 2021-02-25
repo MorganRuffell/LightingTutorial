@@ -1,0 +1,76 @@
+Scriptable Render Pipeline
+
+What is the SRP?
+
+-	The SRP is unity latest rendering solution that allows config of unitys rendering via C#
+-	Out of the box it offers two templated solutions HDRP, URP.
+-	Offers more control that the built in solution.
+-	Some built in features are still in devlopment, these are minimal but they are still in development.
+
+# HDRP
+
+-	The high default rendering solution that is offered by Unity.
+-	While in theory tou can build your game for any platform using this pipeline you would use this
+
+# URP
+
+URP or LWRP, is an alternate rednering solution that is geared towards compatibility and performance.
+While many features are still avaliable in this pipleine their implemenations may differ to ofavour performance.
+We can still use this for pretty things but primarily for lower end devices.
+
+In URP you cannot have point lights that are realtime and reflective, and for this you'll have to use HDRP.
+
+Area lights are emitted from a plane duh, there is some difference between point lights and area lights.
+Screen space reflections in URP are not supported and HDRP they are supported.
+Auto Exposure is not supported in URP and HDRP. 
+
+Light cookies allow you to apply a texture to light, so that it has alpha interpolation. 
+
+Ray Tracing light per object limits.
+
+Remember to generate lightmap UVs enabled, unless the artists have manually created it themselves.
+
+HDRP + DXR is Raytracing!
+
+# HDRP Standard Shader
+
+The mask map disorts the mesh per vertex.
+
+
+## Occulusion Culling
+
+LOD
+	-	LODs are critical when optimising scene geometry. It generates different meshes at different levels of detail.
+	-	You can generate this LODs in Maya
+	- 	You can use UE4 auto LOD system to generate game ready LODs then export back to unity.
+
+Mip Maps
+	-	Texture Streaming, the LODs of the texture world.
+	-	Consumes a small amount of CPU.
+	- 	Edit -> Project Settings -> Quality -> Per Quality option. You can pick these settings in texture streaming.
+
+Dynamic Resolution
+
+	-	New Technology that is emerging and was pioneered by nintendo with BOTW.
+	-	Avaliable on the camera
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
